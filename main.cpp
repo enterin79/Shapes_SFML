@@ -16,7 +16,14 @@ sf::Color getRandomColor() {
 }
 
 sf::Vector2f getRandomSize() {
-    return { (float)(rand() % 200 + 50), (float)(rand() % 200 + 50) };
+
+    if (rand() % 2) {
+        return { (float)(rand() % 200 + 50), (float)(rand() % 200 + 50) };
+    }
+    else {
+        float x = (float)(rand() % 200 + 50);
+        return { x, x };
+    }
 }
 
 bool onAnyButtonOver(list<Button>* buts) {
